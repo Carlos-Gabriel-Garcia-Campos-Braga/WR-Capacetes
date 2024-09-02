@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adição de Produtos</title>
+    <link rel="stylesheet" href="../css/addProduct-styles.css">
+    <link rel="shortcut icon" type="imagex/png" href="../img/Logo Loja(sem fundo).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script src="../js/addProduct-scripts.js" defer></script>
+    <script src="https://kit.fontawesome.com/d019098c17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        
+        <div class="Inicio">
+            <img src="../img/Logo VR Capacetes.jpeg" alt="Logo">            
+            <input type="text" name="SearchBar" class="SearchBar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        
+
+            <nav id="mainMenu">
+                <ul id="navList">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+
+                <nav id="Nav">
+                    <ul id="Menu">
+                        <li>
+                            <span>
+                                Ja é nosso cliente? <br>
+                                <a href="html/login.html">Faça Login</a>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Ou <br><a href="html/signup.html">Registre-se</a></span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav id="Loged">
+                    <ul id="logedMenu">
+                        <h2>Olá, Usuário</h2>
+                        <li class="mobile"><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
+                        <li><a href="html/profile.html"><i class="fa-solid fa-user"></i>Seu perfil</a></li>
+                        <li class="mobile"><i class="fa-solid fa-info"></i><a href="">Sobre</a></li>
+                        <li><a href=""><i class="fa-solid fa-headset"></i>Suporte</a></li> <!-- O suporte será o número de telefone da loja-->
+                        <li><a href=""><i class="fa-solid fa-person-walking-arrow-loop-left"></i>Sair</a></li>
+                    </ul>
+                </nav>
+
+            <button id="btnMenu">
+                <span class="hamburger"></span>
+            </button>
+            </nav>
+    </header>
+
+    <main>
+        <div class="mainContainer">
+            
+            <div class="input-Container">
+                <label id="marcaLabel">Marca</label>
+                <input type="text" placeholder="Marca" id="marca">
+            </div>
+
+            <div class="input-Container">
+                <label id="modeloLabel">Modelo</label>
+                <input type="text" placeholder="Modelo" id="modelo">
+            </div>
+
+            <div class="input-Container">
+                <label id="tamanhoLabel">Tamanho</label>
+                <select id="tamanho">
+                    <option>Selecione</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>XXXL</option>
+                </select>
+
+                <label id="none">Tem mais tamanhos disponíveis?</label>
+
+                <section id="moreOptions">
+
+                    <div>
+                        <label for="">Sim</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+
+                    <div>
+                        <label for="">Não</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+
+
+                </section>
+                    <div id="more">
+                        <label for="">Digite os diferentes tamanhos a mais disponíveis abaixo</label>
+                        <input type="text">
+                    </div>
+
+                
+            </div>
+
+            <div class="input-Container">
+                <label id="corLabel">Cor</label>
+                <input type="text" placeholder="Cor" id="cor">
+            </div>
+
+            <div class="input-Container">
+                <label id="materialLabel">Material</label>
+                <input type="text" placeholder="Material" id="material">
+            </div>
+
+            <div class="input-Container">
+                <label id="categoriaLabel">Categoria</label>
+                <select id="categoria">
+                    <option>Selecione</option>
+                    <option>Capacete Integral(Full-Face)</option>
+                    <option>Capacete Aberto(Open-Face)</option>
+                    <option>Capacete Modular(Flip-Up)</option>
+                    <option>Capacete Off-Road(Motocross)</option>
+                    <option>Capacete Dual Sport(Adventure)</option>
+                    <option>Capacete Half(Meio-Casco)</option>
+                    <option>Capacete Retrô</option>
+                </select>
+            </div>
+
+            <div class="input-Container">
+                <label id="pesoLabel">Peso</label>
+                <input type="text" placeholder="Peso" id="peso">
+            </div>
+
+            <div class="input-Container">
+                <label id="certificacaoLabel">Certificação</label>
+                <input type="text" placeholder="Certificação" id="certificacao">
+            </div>
+            
+            <button type="button" id="button" >Cadastrar Produto</button>
+            </div>
+
+            <div id="errorModal">
+                <h1>Selecione todas as opcoes para cadastrar o produto</h1>
+            </div>
+
+        
+    </main>
+
+    <footer>
+        <span>Moto, 2024</span>
+    </footer>
+</body>
+</html>

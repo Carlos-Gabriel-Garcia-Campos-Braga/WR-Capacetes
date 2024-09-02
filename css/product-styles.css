@@ -1,0 +1,527 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Montserrat';
+
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+span{
+    color: #fff;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #000;
+    width: 100%;
+    height: 110px;
+}
+
+header .Inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.Inicio i{
+    font-size: 27px;
+    padding: 10px;
+}
+
+.Inicio img{
+    width: 9.5em;
+}
+
+.Inicio h1{
+    color: #fff;
+}
+
+.fa-cart-shopping{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.fa-cart-shopping:hover{
+    color: #069a02;
+}
+
+.fa-magnifying-glass{
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 0px 16px 16px 0px;
+    cursor:pointer;
+}
+
+header .Inicio input{
+    width: 20em;
+    height: 40px;
+    margin: 0px 0px 0px 31px;
+    outline: none;
+    border-radius: 16px 0px 0px 16px;
+    border: none;
+}
+
+.Inicio .SearchBar::placeholder{
+    padding: 16px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    margin: 20px;
+}
+
+#navList{
+    list-style: none;
+    display: flex;
+}
+
+#navList li{
+    letter-spacing: 2px;
+    margin-left: 30px;
+}
+
+#navList a{
+    transition: 0.2s ease-in;
+}
+
+#navList a:hover{
+    color: #069a02;
+}
+
+
+
+
+
+#Nav{
+   
+    visibility: hidden;
+    overflow-y: hidden;
+
+    width: 20%;
+    height: 0px;
+                
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+
+    transition: 0.6s;
+
+    border-radius: 10px;
+}
+
+#Nav a{
+    color: #069a02;
+}
+
+#Nav.active{
+    height: 15%; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: visible;
+    overflow-y: auto;
+}
+
+/* MENU HAMBURGER */
+#btnMenu{
+    display: flex;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    padding: 25px;
+    margin: 20px;
+}
+
+
+.hamburger{
+    display: block;
+    border-top: 2px solid #fff;
+    width: 35px;
+}
+
+.hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 10px;
+    position: relative;
+
+    transition: 0.3s;
+}
+
+#btnMenu.animation .hamburger{
+    border-top-color: transparent;
+}
+
+#btnMenu.animation .hamburger::before{
+    transform: rotate(45deg);
+}
+
+#btnMenu.animation .hamburger::after{
+    transform: rotate(-45deg);
+    top: -12px;
+}
+
+#Loged{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25vw;
+    height: 0;
+                
+    background: #000;
+    position: absolute;
+    top: 10vh;
+    border-radius: 10px;
+    right: 0;
+    
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.6s;
+
+}
+
+.mobile{
+    display: none;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#Loged h2{
+    color: #069a02;
+}
+
+#Loged a{
+    color: #069a02;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+#Loged li{
+    margin: 20px;
+}
+
+#Loged i{
+    color: #069a02;
+    margin: 10px;
+    font-size: 20px;
+}
+    
+
+
+#Loged.LogedMenu{
+    
+    margin: 0;
+    height: 30vh; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: visible;
+}
+
+/* Main */
+
+main{
+    width: 100%;
+    display: flex;
+}
+#produtoImg{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 30em;
+    background-color: transparent;
+    overflow: hidden;
+
+}
+
+#produtoImg img{
+    transform-origin: center center;
+    object-fit: cover;
+}
+
+.precoContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    width: 18%;
+    height: 30em;
+    border: 1px solid #000;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.precoContainer span{
+    color: #000;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+}
+
+.btns button{
+    padding: 10px;
+    margin: 8px;
+    border: none;
+    border-radius: 9px;
+
+    cursor:pointer;
+    transition: 0.3s ease-in;
+}
+
+.btns #cartBtn:hover{
+    background-color:#077304 ;
+}
+
+.btns #buyBtn:hover{
+    background-color:#077304 ;
+}
+
+.btns #cartBtn{
+    background-color: #069a02;
+    color: #fff;
+}
+
+.btns #buyBtn{
+    background-color: #069a02;
+    color: #fff;
+}
+
+.preco-Frete{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.preco-Frete .price{
+    font-size: 28px;
+    color: #069a02;
+    margin: 12px;
+}
+
+.storage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.storage p strong {
+    color: #069a02;
+}
+
+.storage select{
+    margin: 8px;
+}
+
+.preco-Frete .deliverInfo{
+    margin: 12px;
+}
+
+.prodInfo{
+    width: 50%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tamanho{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tamanho button{
+    margin: 6px;
+    padding: 8px;
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    background-color: #069a02;
+
+    cursor:pointer;
+    transition: 0.3s ease-in;
+}
+
+.tamanho button:hover{
+    background-color:#077304
+}
+
+
+
+.prodInfo div{
+    margin: 15px 0px 10px 0px;
+}
+
+.prodInfo span{
+    color: #000;
+    margin: 12px 0px 0px 0px;
+}
+
+.prodInfo h1{
+    font-size: 28px;
+}
+
+select{
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+select:focus{
+    border-color: #069a02;
+}
+
+#Box-Cores img{
+    width: 80px;
+    margin: 20px 0px 0px 20px;
+    padding: 2px;
+    border: 1.5px solid #000;
+    transition: 0.6s ease;
+}
+
+#Box-Cores img:hover{
+    box-shadow: 2px 1px 14px 5px #069a02;
+    border-color: #069a02;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 500px){
+        main {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        #produtoImg {
+            width: 100%;
+            font-size: 2px;
+            height: 20rem;
+        }
+    
+        .prodInfo {
+            width: 90%;
+            padding: 20px;
+        }
+    
+        .precoContainer {
+            width: 90%;
+            height: auto;
+            margin: 20px 0;
+        }
+    
+        #Box-Cores img {
+            width: 60px;
+            margin: 10px;
+        }
+    
+        .tamanho button {
+            margin: 6px 4px;
+            padding: 8px;
+            font-size: 14px;
+        }
+    
+        .btns button {
+            padding: 12px;
+            margin: 10px 0;
+        }
+    
+        .prodInfo h1 {
+            font-size: 22px;
+        }
+    
+        .preco-Frete .price {
+            font-size: 24px;
+        }
+    
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+    }
+
+    .Inicio img{
+        display: none;
+    }
+
+    #Loged{
+        width: 100vw;
+        
+    }
+
+    #Loged.LogedMenu{
+        height: 100vh;  
+    }
+    .Inicio h1{
+    margin: 0px 0px 0px 20px;
+    font-size: 15px;
+}
+    .Inicio i{
+    width: 5px;
+}
+
+    #navList{
+    display: none;
+}
+
+    .mobile{
+    display: flex;
+}
+
+    #Loged.LogedMenu{
+    height: 48vh;
+}
+
+    .fa-magnifying-glass{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+    .Inicio img{
+    width: 8em;
+}
+
+    .Inicio input{
+    width: 10em;
+}
+   
+}

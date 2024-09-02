@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/login-styles.css">
+    <link rel="shortcut icon" type="imagex/png" href="../img/Logo Loja(sem fundo).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/d019098c17.js" crossorigin="anonymous"></script>
+    <script src="../js/login-scripts.js" defer></script>
+</head>
+<body>
+
+    <main>
+       <form>
+
+            <div class="logo">
+                <img src="../img/Logo Loja(sem fundo).png" alt="Logo da Loja">
+            </div>
+            <div class="inputs">
+                <div class="login-inputs">
+                    <label id="emailLabel">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="login-inputs">
+                    <label id="passwordLabel">Senha</label>
+                        <input type="password" id="passwordLogin" placeholder="Digite sua senha">
+                </div>
+
+                <div class="icon">
+                    <i class="fa-regular fa-eye" id="IconLogin" onclick="ShowHideLogin()"></i>
+                </div>
+            </div>
+
+            <h4>
+                Ainda não possui uma conta em nossa Loja?
+                <a href="signup.html">Clique aqui para relizar seu cadastro</a>
+            </h4>
+            
+            <button onclick="Login()">Fazer Login</button>
+       </form>
+    </main>
+
+
+
+    <footer>
+        <span>Motos, 2024</span>
+    </footer>
+</body>
+</html>

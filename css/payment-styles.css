@@ -1,0 +1,370 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+span {
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    width: 100%;
+    height: 110px;
+}
+
+header .Inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.Inicio i {
+    font-size: 27px;
+    padding: 10px;
+}
+
+.Inicio img {
+    width: 9.5em;
+}
+
+.Inicio h1 {
+    color: #fff;
+}
+
+.fa-cart-shopping {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.fa-cart-shopping:hover {
+    color: #069a02;
+}
+
+.fa-magnifying-glass {
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 0px 16px 16px 0px;
+    cursor: pointer;
+}
+
+header .Inicio input {
+    width: 20em;
+    height: 40px;
+    margin: 0px 0px 0px 31px;
+    outline: none;
+    border-radius: 16px 0px 0px 16px;
+    border: none;
+}
+
+.Inicio .SearchBar::placeholder {
+    padding: 16px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    margin: 20px;
+}
+
+#navList {
+    list-style: none;
+    display: flex;
+}
+
+#navList li {
+    letter-spacing: 2px;
+    margin-left: 30px;
+}
+
+#navList a {
+    transition: 0.2s ease-in;
+}
+
+#navList a:hover {
+    color: #069a02;
+}
+
+#Nav {
+    visibility: hidden;
+    overflow-y: hidden;
+    width: 20%;
+    height: 0px;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    transition: 0.6s;
+    border-radius: 10px;
+}
+
+#Nav a {
+    color: #069a02;
+}
+
+#Nav.active {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: visible;
+    overflow-y: auto;
+}
+
+/* MENU HAMBURGER */
+#btnMenu {
+    display: flex;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    padding: 25px;
+    margin: 20px;
+}
+
+.hamburger {
+    display: block;
+    border-top: 2px solid #fff;
+    width: 35px;
+}
+
+.hamburger::after,
+.hamburger::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+#btnMenu.animation .hamburger {
+    border-top-color: transparent;
+}
+
+#btnMenu.animation .hamburger::before {
+    transform: rotate(45deg);
+}
+
+#btnMenu.animation .hamburger::after {
+    transform: rotate(-45deg);
+    top: -12px;
+}
+
+#Loged {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25vw;
+    height: 0;
+    background: #000;
+    position: absolute;
+    top: 10vh;
+    border-radius: 10px;
+    right: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.6s;
+}
+
+.mobile {
+    display: none;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#Loged h2 {
+    color: #069a02;
+}
+
+#Loged a {
+    color: #069a02;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+#Loged li {
+    margin: 20px;
+}
+
+#Loged i {
+    color: #069a02;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#Loged.LogedMenu {
+    margin: 0;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: visible;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.paymentBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #000;
+}
+
+#cardMethod,
+#boletoMethod,
+#pixMethod {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cardMethod:hover,
+#boletoMethod:hover,
+#pixMethod:hover {
+    background-color: #f0f0f0;
+}
+
+.paymentsMethods {
+    width: 20%;
+    height: 26.5vh;
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.inputs input {
+    border: 1px solid #000;
+    border-radius: 12px;
+    outline: none;
+    padding: 20px;
+    width: 16em;
+}
+
+#cardReveal {
+    width: 40%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button{
+    width: 20%;
+    padding: 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 9px;
+    background-color: #069a02;
+    color: #fff;
+    font-size: 20px;
+
+    cursor:pointer;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    background-color:#077304 ;
+}
+
+/* Responsivo */
+@media screen and (max-width: 500px) {
+    .paymentBox {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .paymentsMethods {
+        width: 100vw;
+    }
+
+    #cardMethod,
+    #boletoMethod,
+    #pixMethod {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #cardReveal {
+        width: 100%;
+    }
+
+    .inputs input {
+        width: 100%;
+    }
+
+    #pixCode {
+        width: 100%;
+    }
+
+    #qrCode {
+        width: 100px; /* Ajusta o tamanho do QR Code */
+        height: 100px;
+    }
+
+    #timer {
+        font-size: 1.2em;
+    }
+
+    button{
+        width: 50%;
+    }
+}

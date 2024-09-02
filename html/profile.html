@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/profile-styles.css">
+    <link rel="shortcut icon" type="imagex/png" href="../img/Logo Loja(sem fundo).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/d019098c17.js" crossorigin="anonymous"></script>
+    <script src="../js/profile-scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        
+        <div class="Inicio">
+            <img src="../img/Sem Título-1.png" alt="Logo">
+            <h1>Nome da Loja</h1>
+            
+            <input type="text" name="SearchBar" class="SearchBar" placeholder="O que você procura?">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        
+
+            <nav id="mainMenu">
+                <ul id="navList">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+
+                <nav id="Nav">
+                    <ul id="Menu">
+                        <li>
+                            <span>
+                                Ja é nosso cliente? <br>
+                                <a href="html/login.html">Faça Login</a>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Ou <br><a href="html/signup.html">Registre-se</a></span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav id="Loged">
+                    <ul id="logedMenu">
+                        <h2>Olá, Usuário</h2>
+                        <li class="mobile"><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
+                        <li><a href="html/profile.html"><i class="fa-solid fa-user"></i>Seu perfil</a></li>
+                        <li class="mobile"><i class="fa-solid fa-info"></i><a href="">Sobre</a></li>
+                        <li><a href=""><i class="fa-solid fa-headset"></i>Suporte</a></li> <!-- O suporte será o número de telefone da loja-->
+                        <li><a href=""><i class="fa-solid fa-person-walking-arrow-loop-left"></i>Sair</a></li>
+                    </ul>
+                </nav>
+
+            <button id="btnMenu">
+                <span class="hamburger"></span>
+            </button>
+            </nav>
+    </header>
+
+    <main>
+
+        <form>
+
+            <div class="Info">
+                <span><strong>Nome</strong>
+                    <p>Nome de quem fez o Login</p>
+                </span>
+                
+                <button type="button" id="btnEdit" onclick="openNameModal()">Editar</button>
+            </div>
+
+            <div class="Info">
+                <span><strong>E-mail</strong>
+                    <p>E-mail de quem fez o Login</p>
+                </span>
+                
+                <button type="button" id="btnEdit" onclick="OpenEmailModal()">Editar</button>
+            </div>
+
+            <div class="Info">
+                <span><strong>Senha</strong>
+                    <p>Senha de quem fez o Login</p>
+                </span>
+                
+                <button type="button" id="btnEdit" onclick="OpenSenhaModal()">Editar</button>
+            </div>
+
+            <div class="Info">
+                <span><strong>CPF</strong>
+                    <p>CPF de quem fez o Login</p>
+                </span>
+                
+                <button type="button" id="btnEdit" onclick="OpenCPFModal()">Editar</button>
+            </div>
+
+           
+        </form>
+        
+            <div id="nameModal">
+                <div class="modalInfo">
+                    <h1>Alterar Nome</h1>
+                    <div>
+                        <label for="">Digite o nome que deseja trocar</label>
+                        <input type="text" placeholder="Digite o novo nome aqui" id="nameInput">
+                    </div>
+
+                    <div class="buttons">
+                       <button onclick="closeNameModal()" class="btnCancel">Cancelar</button>
+                       <button class="btnSave">Salvar</button>  
+                    </div>
+                </div>
+                    
+            </div>
+
+            <div id="emailModal">
+                <article class="modalInfo">
+                    <h1>Alterar E-mail</h1>
+                    <div>
+                        <label for="">Digite o e-mail que deseja vincular</label>
+                        <input type="email" placeholder="Digite o novo e-mail aqui" id="emailInput">
+                    </div>
+                        <div class="buttons">
+                        <button onclick="CloseEmailModal()" class="btnCancel">Cancelar</button>
+                        <button class="btnSave">Salvar</button>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div id="senhaModal">
+                <article class="modalInfo">
+                    <h1>Alterar Senha</h1>
+                    <div>
+                        <label for="">Digite a nova Senha</label>
+                        <input type="password" placeholder="Digite a nova senha aqui" id="passwordInput1">
+                        <label for="">Confirmar Senha</label>
+                        <input type="password" placeholder="Digite a nova senha aqui" id="passwordInput2">
+                    </div>
+                    <div class="buttons">
+                        <button onclick="CloseSenhaModal()" class="btnCancel">Cancelar</button>
+                        <button class="btnSave">Salvar</button>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div id="CPFModal">
+                <article class="modalInfo">
+                    <h1>Alterar CPF</h1>
+                    <div>
+                        <label for="">Digite o CPF</label>
+                        <input type="number" placeholder="Digite a nova senha aqui">
+                    </div>
+                    <div class="buttons">
+                        <button onclick="CloseCPFModal()" class="btnCancel">Cancelar</button>
+                        <button class="btnSave">Salvar</button>
+                    </div>
+                </article>
+            </div>
+    </main>
+
+    <footer>
+        <span>Motos, 2024</span>
+    </footer>
+</body>
+</html>

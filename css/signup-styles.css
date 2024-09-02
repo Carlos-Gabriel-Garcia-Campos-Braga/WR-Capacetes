@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Montserrat';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*background-image:linear-gradient(
+        to bottom left,
+        #525454,
+        #e1e3e3
+    );*/
+
+    background-color: #525454;
+    background-size: 300% 100%;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: 0px 20px 0px 0px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in;
+}
+
+a:hover{
+    color: #65B307;
+}
+
+.gradient{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(
+        to bottom left,
+        #525454,
+        /* #e1e3e3, */
+        #069a02
+    );
+    background-size: 300% 100%;
+
+    margin: 0px 20px 0px 20px;
+    border-radius: 16px;
+}
+
+.words-container{
+    
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 26px 0px 0px 26px;
+    
+
+    
+}
+
+.mainContainer{
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    background-color: #e0dfdc;
+    border-radius: 20px;
+}
+
+.words-container h1{
+    
+    text-align: center;
+}
+
+.words-container p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 2em;
+}
+
+.logo img{
+    width: 16em;;
+}
+
+.inputs{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.input-group{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input{
+    width: 15em;
+    padding: 9px;
+    outline: none;
+    border-radius: 8px;
+
+    border: 1.3px solid;
+    transition: .3s ease;
+}
+
+.input-group input:focus{
+    border: 1.5px solid #193ddb;
+}
+
+button{
+    width: 30%;
+    height: 4em;
+
+    border: none;
+    border-radius: 18px;
+
+    transition: 0.3s ease-in-out;
+
+}
+
+button:hover{
+    background-color: #000;
+    color: #65B307;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 500px)
+{
+    .words-container{
+        display: none;
+    }
+
+    .mainContainer
+    {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+
+    form
+    {
+        width: 100%;
+        height: 100vh;
+    }
+    .inputs
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group
+    {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos - Comprar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/payment-styles.css">
+    <link rel="shortcut icon" type="image/png" href="/img/Logo Loja(sem fundo).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="../js/payment-scripts.js" defer></script>
+    <script src="https://kit.fontawesome.com/d019098c17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="Inicio">
+            <img src="../img/Logo VR Capacetes.jpeg" alt="Logo">            
+            <input type="text" name="SearchBar" class="SearchBar" placeholder="Pesquisar...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <nav id="mainMenu">
+            <ul id="navList">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+
+            <nav id="Nav">
+                <ul id="Menu">
+                    <li>
+                        <span>
+                            Já é nosso cliente? <br>
+                            <a href="html/login.html">Faça Login</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Ou <br><a href="html/signup.html">Registre-se</a></span>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="Loged">
+                <ul id="logedMenu">
+                    <h2>Olá, Usuário</h2>
+                    <li class="mobile"><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
+                    <li><a href="html/profile.html"><i class="fa-solid fa-user"></i>Seu perfil</a></li>
+                    <li class="mobile"><i class="fa-solid fa-info"></i><a href="">Sobre</a></li>
+                    <li><a href=""><i class="fa-solid fa-headset"></i>Suporte</a></li>
+                    <li><a href=""><i class="fa-solid fa-person-walking-arrow-loop-left"></i>Sair</a></li>
+                </ul>
+            </nav>
+
+            <button id="btnMenu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="paymentBox">
+            <div class="paymentsMethods">
+                <div id="cardMethod">
+                    <p>Cartão de Crédito/Débito</p>
+                </div>
+                <div id="boletoMethod">
+                    <p>Boleto</p>
+                </div>
+                <div id="pixMethod">
+                    <p>PIX</p>
+                </div>
+            </div>
+
+            <div id="cardReveal">
+                <div class="inputs">
+                    <label for="cardNumber">Número do Cartão</label>
+                    <input type="text" name="cardNumber" id="cardNumber" placeholder="Número do cartão">
+                </div>
+
+                <div class="inputs">
+                    <label for="cardHolder">Nome do Titular</label>
+                    <input type="text" name="cardHolder" id="cardHolder" placeholder="Nome do Titular">
+                </div>
+
+                <div class="inputs">
+                    <label for="expiryDate">Data de Validade</label>
+                    <input type="text" name="expiryDate" id="expiryDate" placeholder="Data de Validade">
+                </div>
+
+                <div class="inputs">
+                    <label for="securityCode">Código de Segurança</label>
+                    <input type="text" name="securityCode" id="securityCode" placeholder="Código de Segurança (CVV)">
+                </div>
+
+                <div class="inputs">
+                    <label for="address">Endereço</label>
+                    <input type="text" name="address" id="address" placeholder="Endereço">
+                </div>
+
+                <div class="inputs">
+                    <label for="zipCode">CEP</label>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="CEP">
+                </div>
+
+                <div class="inputs">
+                    <label for="complement">Complemento</label>
+                    <input type="text" name="complement" id="complement" placeholder="Ex: Condomínio, Referência...">
+                </div>
+
+                <div class="inputs">
+                    <label for="number">Número</label>
+                    <input type="text" name="number" id="number" placeholder="Número">
+                </div>
+            </div>
+
+            <div id="pixCode">
+                <div id="qrCodeContainer">
+                    <img id="qrCode" src="" alt="QR Code">
+                    <span id="timer">10:00</span>
+                </div>
+            </div>
+
+            
+        </div>
+        <button>Finalizar Compra</button>
+    </main>
+
+    <footer>
+        <span>Motos, 2024</span>
+    </footer>
+</body>
+</html>
